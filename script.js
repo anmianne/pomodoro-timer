@@ -53,6 +53,8 @@ btnStart.addEventListener('click', function () {
 });
 
 btnBreak.addEventListener('click', function () {
+    btnBreak.classList.add('active');
+    btnPomodoro.classList.remove('active');
     clearInterval(timerId);
     isRunning = false;
     btnStart.textContent = 'Start';
@@ -63,6 +65,8 @@ btnBreak.addEventListener('click', function () {
 });
 
 btnPomodoro.addEventListener('click', function () {
+    btnPomodoro.classList.add('active');
+    btnBreak.classList.remove('active');
     clearInterval(timerId);
     isRunning = false;
     btnStart.textContent = 'Start';
